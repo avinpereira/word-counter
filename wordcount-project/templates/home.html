@@ -7,9 +7,13 @@
 </head>
 <body>
     <h1>Word Counter using Django</h1>
+    <a href="{% url 'about'%}">About Word Counter</a>
 
-    <form action="">
+    <form action="{% url 'count' %}">
+        <!-- name attribute helps us retrieve the information from html to our views function -->
         <textarea name="fulltext" id="text" cols="50" rows="20"></textarea>
+        <br>
+        <input type="submit" value="Count" >
     </form>
     
 </body>
